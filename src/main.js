@@ -15,14 +15,16 @@ gsap.to('.ball', {
   x: 100, // any properties (not limited to CSS)
   backgroundColor: 'red', // camelCase
   duration: 1, // seconds
-  delay: 0.5,
+  delay: 0,
   ease: 'power2.inOut',
-  stagger: 0.2, // stagger start times
-  repeat: 4, // number of repeats (-1 for infinite)
+  stagger: 0.3, // stagger start times
   rotation: 27,
   scrollTrigger: {
     markers: true,
     trigger: '.control',
+    start: 'top 50%',
+    end: 'bottom 50%',
+    scrub: true,
   },
 })
 
