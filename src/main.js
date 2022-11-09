@@ -58,7 +58,7 @@ gsap.to('.could', {
 
 var tween = gsap.to('.moto', {
   duration: 4,
-  x: 950,
+  x: 1920,
   ease: 'none',
   paused: true,
 })
