@@ -1,4 +1,6 @@
 import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+gsap.registerPlugin(ScrollTrigger)
 
 gsap.to('.bike', { xPercent: 100, duration: 3, ease: 'power2.out' })
 
@@ -18,6 +20,10 @@ gsap.to('.ball', {
   stagger: 0.2, // stagger start times
   repeat: 4, // number of repeats (-1 for infinite)
   rotation: 27,
+  scrollTrigger: {
+    markers: true,
+    trigger: '.control',
+  },
 })
 
 gsap.to('.sun', {
@@ -37,14 +43,14 @@ gsap.to('.bird', {
   duration: 2, // seconds
   ease: 'power2.inOut',
   stagger: 1, // stagger start times
-  repeat: 10, // number of repeats (-1 for infinite)
+  repeat: 100, // number of repeats (-1 for infinite)
   rotation: -10,
 })
 gsap.to('.two', {
   // selector text, Array, or object
   y: -20, // any properties (not limited to CSS)
   x: -50,
-  repeat: 10,
+  repeat: 100,
   duration: 2, // seconds
   rotation: -50,
 })
@@ -53,7 +59,7 @@ gsap.to('.could', {
   duration: 2,
   x: -100,
   ease: 'none',
-  repeat: 5,
+  repeat: 100,
 })
 
 var tween = gsap.to('.moto', {
